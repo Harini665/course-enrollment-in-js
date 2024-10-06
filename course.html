@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment</title>
+    <style>
+       
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#courseList p {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Course Enrollment System</h1>
+
+       
+        <div class="section">
+            <h3>Add Course</h3>
+            <input type="text" id="courseName" placeholder="Course Name">
+            <input type="text" id="courseCode" placeholder="Course Code">
+            <button onclick="addCourse()">Add Course</button>
+            <button onclick="clearFields('courseName', 'courseCode')">Clear</button>
+        </div>
+
+        
+        <div class="section">
+            <h3>Enroll Student</h3>
+            <input type="text" id="courseCodeForEnroll" placeholder="Course Code">
+            <input type="text" id="studentName" placeholder="Student Name">
+            <button onclick="enrollStudent()">Enroll</button>
+            <button onclick="clearFields('courseCodeForEnroll', 'studentName')">Clear</button>
+        </div>
+
+       
+        <div class="section">
+            <h3>Courses</h3>
+            <div id="courseList"></div>
+        </div>
+    </div>
+
+   
+    <script src="course.js"></script>
+
+</body>
+</html>
